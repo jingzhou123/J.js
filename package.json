@@ -1,0 +1,28 @@
+{
+  "name": "J.js",
+  "version": "0.1.0",
+  "description": "all helper functions",
+  "main": "J.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-mocha-phantomjs": "^0.6.1",
+    "mocha": "^2.2.4",
+    "should": "^5.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jingzhou123/J.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jingzhou123/J.js/issues"
+  }
+}

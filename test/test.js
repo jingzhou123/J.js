@@ -9,10 +9,20 @@ describe('each', function() {
       a: 1,
       b: 2
     };
+    var log = [];
     J.each(obj, function(value, key){
-      return obj[key] = value * 2;
+      log.push(key + ":" + value);
     });
-    expect(obj.a).to.be.equal(2);
-    expect(obj.b).to.be.equal(4);
+    expect(log[0]).to.be.equal("a:1");
+    expect(log[1]).to.be.equal("b:2");
+  });
+  it("should iterate an array", function() {
+    var arr = [1, 2];
+    var log = [];
+    J.each(arr, function(value, index) {
+      log.push(index + ":" + value);
+    });
+    expect(log[0]).to.be.equal("0:1");
+    expect(log[1]).to.be.equal("1:2");
   })
 })

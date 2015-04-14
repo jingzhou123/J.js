@@ -4,8 +4,10 @@ var J = {
     return f && Object.prototype.toString.call(f) === "[object Function]";
   },
   each: function(objOrArr, iterator) {
-    if (objOrArr && typeof objOrArr == 'number') {
-      
+    if (objOrArr && typeof objOrArr.length == 'number') {
+      for (var i = 0, l = objOrArr.length; i < l; i ++) {
+        iterator(objOrArr[i], i);
+      }  
     } else {
       if(!this.isFunction(iterator)) return;
       var keys = Object.keys(objOrArr);

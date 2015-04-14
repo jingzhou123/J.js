@@ -1,8 +1,24 @@
 var gulp = require('gulp');
 var mochaPhantomJS = require('gulp-mocha-phantomjs');
+var karma = require('karma').server;
 
-gulp.task('test', function() {
-  return gulp
-  .src('test/index.html')
-  .pipe(mochaPhantomJS());
-})
+/**
+ * Run test once and exit
+ */
+gulp.task('test', function (done) {
+  karma.start({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done);
+});
+
+/**
+ * Watch for file changes and re-run tests on each change
+ */
+gulp.task('tdd', function (done) {
+  karma.start({
+    configFile: __dirname + '/karma.conf.js'
+  }, done);
+});
+
+gulp.task('default', ['tdd']);

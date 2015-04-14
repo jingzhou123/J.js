@@ -15,5 +15,8 @@ var J = {
         iterator(objOrArr[keys[i]], keys[i]);
       }
     }  
+  },
+  strstr: function(long, short) {
+    return String.prototype.indexOf.call(long, short) !== -1;
   }
 }

@@ -25,4 +25,12 @@ describe('each', function() {
     expect(log[0]).to.be.equal("0:1");
     expect(log[1]).to.be.equal("1:2");
   })
+});
+describe("strstr", function() {
+  it("should check if a long string contains a shorter one", function() {
+    var long = "abc";
+    var short = "ab";
+    expect(J.strstr(long, short)).to.be.ok();
+    expect(J.strstr("a", "ab")).to.not.be.ok();
+  });
 })

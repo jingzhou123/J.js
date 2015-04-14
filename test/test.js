@@ -3,7 +3,7 @@ describe('isFunction', function(){
     expect(J.isFunction({})).to.not.be.ok();
   });
 });
-decribe('each', function() {
+describe('each', function() {
   it('should iterate own keys of an object', function() {
     var obj = {
       a: 1,

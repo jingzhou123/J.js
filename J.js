@@ -16,6 +16,13 @@ var J = {
       }
     }  
   },
+  object: function(list, values) {
+    var obj = {};
+    for (var i = 0, l = list.length; i < l; i ++) {
+      obj[list[i]] = ((values[i] !== undefined) ? values[i] : undefined);
+    }
+    return obj;
+  },
   strstr: function(long, short) {
     return String.prototype.indexOf.call(long, short) !== -1;
   }
